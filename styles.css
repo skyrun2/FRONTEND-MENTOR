@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+ *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    /* box-sizing: border-box; */
+    /* font-size: 0.875rem; */
+ }
+ /* .dm-e{
+    background-color:hsl(209, 23%, 22%) ;
+    color:  hsl(0, 0%, 100%);
+}
+ .dm-b{
+    color:  hsl(0, 0%, 100%);
+    background-color:  hsl(207, 26%, 17%);
+ } */
+ /* .lm-i{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 52%);
+    box-shadow: .3rem .3rem 0.5rem #11151745;
+ }
+ .lm-b{
+    background-color: hsl(0, 0%, 98%) ;
+    color:  hsl(200, 15%, 8%);
+ }
+ .lm-e{
+    background-color: hsl(0, 0%, 100%);
+    color:  hsl(200, 15%, 8%);
+    box-shadow: .3rem .3rem 0.5rem #11151745;
+ } */
+
+/* body{
+    width: 100%;
+    background-color: aquamarine;
+} */
+:root {
+    --dmElements: hsl(209, 23%, 22%);
+    --dmBackground: hsl(207, 26%, 17%);
+    --lmText: hsl(200, 15%, 8%);
+    --lmInput: hsl(0, 0%, 52%);
+    --lmBackground: hsl(0, 0%, 98%);
+    --lmElements: hsl(0, 0%, 100%);
+    --dmText: hsl(0, 0%, 100%);
+}
+.search-handle, .country, .filter, .contients{
+    box-shadow: .3rem .3rem 0.3rem #11151715;
+}
+
+body.lm .header{
+    background-color: var(--lmElements);
+    color: var(--lmText);
+}
+body.lm main{
+    background-color: var(--lmBackground);
+    color: var(--lmText);
+}
+body.lm .search-handle{
+    background-color: var(--lmInput);
+    color: var(--lmText);
+}
+body.lm .search-icon{
+    background-color: var(--lmElements);
+    color: var(--lmInput);
+}
+body.lm .search{
+    background-color: var(--lmElements);
+    color: var(--lmInput);
+}
+body.lm .filter{
+    background-color: var(--lmElements);
+}
+body.lm .country{
+    background-color: var(--lmElements);
+    color: var(--lmText);
+}
+body.lm .contients{
+    background-color: var(--lmElements);
+    color: var(--lmText);
+}
+
+body.dm .header{
+    background-color: var(--dmElements);
+    color: var(--dmText);
+}
+body.dm main{
+    background-color: var(--dmBackground);
+    color: var(--dmText);
+}
+body.dm .search-handle{
+    background-color: var(--dmElements);
+    color: var(--dmText);
+}
+body.dm .search-icon{
+    background-color: var(--dmElements);
+    color: var(--dmText);
+}
+body.dm .search{
+    background-color: var(--dmElements);
+    color: var(--dmText);
+}
+body.dm .filter{
+    background-color: var(--dmElements);
+}
+body.dm .country{
+    background-color: var(--dmElements);
+    color: var(--dmText);
+}
+body.dm .contients{
+    background-color: var(--dmElements);
+    color: var(--dmText);
+}
+.header{
+    padding: 0 5%;
+    width: 90%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* box-shadow: .3rem .3rem 5rem #11151745; */
+}
+.where{
+  font-weight: 800;
+}
+.mode{
+    cursor: pointer;
+    font-weight: 600;
+}
+main{
+    padding: 0 2.5%;
+    width: 95%;  
+    box-shadow:inset .3rem .3rem 0.3rem #11151715;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column; 
+} 
+.nav-bar{
+    padding: 5vh 0;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+.search-handle{
+    width: 38%;
+    /* width: 99%; */
+    display: flex;
+    border-radius: 0.7rem ;
+}
+.search-icon{
+    width: 1rem;
+    padding: 0 2.5vh ;
+    border-radius: 0.7rem 0 0 0.7rem ;
+    background-color: inherit;
+}
+.search{
+    border-radius: 0 0.7rem .7rem 0 ;
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    outline: none;
+}
+.search::placeholder{
+    content: "Search for a Country...";
+    border: none;
+}
+.filter{
+    padding: 2vh;
+    width: 12%;
+    text-align: center;
+    border-radius: .5rem;
+    display: flex;
+    /* gap: 10%; */
+    font-size: 0.875rem;
+    font-weight: 800;
+    justify-content: space-evenly;
+}
+.filter:hover{
+    cursor: pointer;
+}
+.filter:hover  .contients{
+    display: flex;
+}
+.drop-down{
+    width: 10%;
+}
+.contients{
+    position:fixed;
+    padding: 1.2vh;
+    width: 12%;
+    height: fit-content;
+    text-align: left;
+    border-radius: .5rem;
+    top: 22.5vh;
+    display: none;
+    flex-direction: column;
+}
+option{
+    padding: .8rem 2rem 0 .5rem;
+    font-weight: 800;
+
+}
+.countries{
+    height: fit-content;
+    display:grid;
+    grid-template-columns:4fr  4fr 4fr 4fr;
+    gap: 4rem;
+}
+.country{
+    width: 100%;
+    border-radius: 0.5rem;
+    height: fit-content;
+    display:flex;
+    flex-direction: column;
+}
+.desc{
+    height: 60%;
+    width: 100%;
+}
+.desc>*{
+    font-size: 0.875rem;
+    text-align: left;
+    padding: 1vh 5% 0;
+}
+.c-flag{
+    height: 20vh;
+    margin: 0 0 0 ;
+    object-fit:cover;
+    display: flex;
+    align-items: start;
+    border-radius: 0.5rem 0.5rem 0 0 ;
+    padding: 0;
+    width: 100%;
+    /* aspect-ratio: 2/1; */
+    /* background-color: black; */
+    /* background-image: url("https://flagcdn.com/ax.svg"); */
+    object-fit: fill;
+    /* background-color: aqua; */
+}
+.c-name{
+    padding: 3vh 5% .5vh;
+    font-weight: 800;
+}
+.bold{
+    padding: unset;
+    font-weight: 600;
+}
+.c-capital{
+    padding: 1vh 5% 5vh 5%;
+}
