@@ -26,17 +26,6 @@ for (let i = 0; i < file.length; i++) {
             </div>`
 }
 countries.innerHTML = countriesString
-//     countries.innerHTML += 
-//         `<div class="country">
-//             <img class="c-flag" src="${e.flag}" alt="">
-//             <div class="desc">
-//                 <h2 class="c-name">${e.name}</h2>
-//                 <p class="c-population"><span class="bold">Population:</span> ${e.population}</p>
-//                 <p class="c-region"><span class="bold">Region:</span>${e.region}</p>
-//                 <p class="c-capital"><span class="bold">Capital:</span>${e.capital}</p>
-//             </div>
-//         </div>`
-// });
 console.timeEnd('one')
 
 
