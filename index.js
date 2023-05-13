@@ -11,6 +11,7 @@ function mode() {
 }
 mode()
 let countries = document.getElementById('countries')
+let loadingScreen = document.getElementById('ls')
 console.time('one')
 let countriesString = ""
 for (let i = 0; i < file.length; i++) {
@@ -26,6 +27,8 @@ for (let i = 0; i < file.length; i++) {
             </div>`
 }
 countries.innerHTML = countriesString
-console.timeEnd('one')
+ console.timeEnd('one')
+ loadingScreen.style.display = 'none'
+ countries.style.display ='grid'
 
 
