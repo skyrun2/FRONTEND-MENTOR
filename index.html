@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="loading.css">
     <title>Document</title>
 </head>
 <body class="lm" id="body">
     <header class="header lm-e  ">
         <h2 class="where">Where in the world?</h2>
-        <span class="mode" id="mode">Dark Mode</span>
+        <div class="mode-handle"><img class="mode-icon" src="rest-countries-api-with-color-theme-switcher-master/design/moon-phase-symbol-svgrepo-com.svg"><span class="mode" id="mode"></span></div>
     </header>
+    <section class="stage loading-screen">
+        <figure class="ball"><span class="shadow"></span></figure>
+      </section>
     <main class="main lm-b dm-b">
         <nav class="nav-bar ">
             <label for="search " class="search-handle lm-i dm-e ">
@@ -23,20 +25,20 @@
                 class="search lm-i dm-e">
             </label>
             <div class="filter lm-e dm-e" id="filter" >
-                <div class="placee=holder">Flter by Region</div>
-                <img class="drop-down" src="rest-countries-api-with-color-theme-switcher-master/design/down-arrow2-svgrepo-com.svg" alt="">
-                <div class="contients lm-e dm-e">
-                    <option value="1">Africa</option>
-                    <option value="2">America</option>
-                    <option value="3">Asia</option>
-                    <option value="4">Europe</option>
-                    <option value="5">Ociena</option>
-                </div>
+                <div class="placeholder">Flter by Region</div>
+                    <img class="drop-down" src="rest-countries-api-with-color-theme-switcher-master/design/down-arrow2-svgrepo-com.svg" alt="">
+                    <div class="contients lm-e dm-e" id="continents">
+                        <option value="0" id="all">All</option>
+                        <option value="1" id="africa">Africa</option>
+                        <option value="2" id="polar">Polar</option>
+                        <option value="3" id="americas">Americas</option>
+                        <option value="4" id="asia">Asia</option>
+                        <option value="5" id="europe">Europe</option>
+                        <option value="6" id="ociena">Ociena</option>
+                    </div>
+            </div>
             </div>
         </nav>
-        <section class="stage" id="ls">
-            <figure class="ball"><span class="shadow"></span></figure>
-          </section>
         <section class="countries " id="countries">
         </section>
     </main>

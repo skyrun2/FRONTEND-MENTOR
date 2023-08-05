@@ -50,6 +50,9 @@ body.lm .header{
     background-color: var(--lmElements);
     color: var(--lmText);
 }
+body.lm .mode::before{
+    content: "light mode";
+}
 body.lm main{
     background-color: var(--lmBackground);
     color: var(--lmText);
@@ -82,6 +85,9 @@ body.dm .header{
     background-color: var(--dmElements);
     color: var(--dmText);
 }
+body.dm .mode::before{
+    content: "dark mode";
+}
 body.dm main{
     background-color: var(--dmBackground);
     color: var(--dmText);
@@ -92,7 +98,9 @@ body.dm .search-handle{
 }
 body.dm .search-icon{
     background-color: var(--dmElements);
-    color: var(--dmText);
+    color: var(--dmText); 
+    fill: var(--dmText);
+    
 }
 body.dm .search{
     background-color: var(--dmElements);
@@ -120,10 +128,20 @@ body.dm .contients{
 }
 .where{
   font-weight: 800;
+  width: 50%;
+}
+.mode-handle{
+    text-align: end;
 }
 .mode{
+    position: relative;
     cursor: pointer;
     font-weight: 600;
+}
+.mode-icon{
+    width: 5%;
+    aspect-ratio: 1;
+    margin-right: 5%;
 }
 main{
     padding: 0 2.5%;
@@ -138,6 +156,7 @@ main{
     display: flex;
     /* align-items: center; */
     justify-content: space-between;
+    align-items:start;
 }
 .search-handle{
     width: 38%;
@@ -147,7 +166,7 @@ main{
 }
 .search-icon{
     width: 1rem;
-    padding: 0 2.5vh ;
+    padding: 1vh 2.5vh ;
     border-radius: 0.7rem 0 0 0.7rem ;
     background-color: inherit;
 }
@@ -163,8 +182,8 @@ main{
     border: none;
 }
 .filter{
-    padding: 2vh;
-    width: 12%;
+    padding: 0.5rem 0.5rem;
+    width: 8rem;
     text-align: center;
     border-radius: .5rem;
     display: flex;
@@ -176,16 +195,16 @@ main{
 .filter:hover{
     cursor: pointer;
 }
-.filter:hover  .contients{
+.filter:hover > .contients{
     display: flex;
 }
 .drop-down{
     width: 10%;
 }
 .contients{
-    position:fixed;
-    padding: 1.2vh;
-    width: 12%;
+    position:absolute;
+    padding: 1.2vh 0;
+    width: 9rem;
     height: fit-content;
     text-align: left;
     border-radius: .5rem;
@@ -194,13 +213,20 @@ main{
     flex-direction: column;
 }
 option{
-    padding: .8rem 2rem 0 .5rem;
+    /* padding: 1rem 1rem; */
+    /* text-align: center; */
     font-weight: 800;
-
+    padding: 0 0.5rem ;
+    /* transform: scale(100%); */
 }
+option:hover{
+    /* transform: scale(90%); */
+    background-color: grey;
+}
+
 .countries{
     height: fit-content;
-    display:none;
+    display:grid;
     grid-template-columns:4fr  4fr 4fr 4fr;
     gap: 4rem;
 }
@@ -228,7 +254,7 @@ option{
     align-items: start;
     border-radius: 0.5rem 0.5rem 0 0 ;
     padding: 0;
-    width: 100%;
+    aspect-ratio: 273/153;
     /* aspect-ratio: 2/1; */
     /* background-color: black; */
     /* background-image: url("https://flagcdn.com/ax.svg"); */
@@ -245,4 +271,133 @@ option{
 }
 .c-capital{
     padding: 1vh 5% 5vh 5%;
+}
+
+@media screen and (max-width:1099px) {
+    .search-handle{
+        height: 5vh;
+    }
+    .countries{
+        grid-template-columns:4fr 4fr 4fr ;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width:999px) {
+    .header{
+        height: 5vh;
+    }
+    
+    .nav-bar{
+        padding: 1.3vh 0;
+        align-items:start;
+    }
+    .search-handle{
+        width: 40%;
+        height: 3vh;
+    }
+    .filter{ 
+        position: relative;
+        padding: 0.5vh 0.5vh;
+        width: 20%;
+    }
+    .placeholder{
+        position: relative;
+    }
+    .contients{
+        position:absolute;
+        padding: 1.2vh;
+        width: 80%;
+        top: 110%;
+    }
+    .countries{
+        grid-template-columns:1fr 1fr 1fr;
+        gap: 2rem;
+    }
+    .country{
+        height:23vh;
+    }
+    .desc{
+        height: 50%;
+    }
+    .desc>*{
+        padding: 5% 5%  0;
+    }     
+    .c-flag{
+        height: 50%;
+        padding: 0;
+    }
+    .c-name{
+        padding: 5% 5% 0;
+    }
+    @media screen and (max-width:800px) {   
+        .country{
+            padding-bottom: 1vh;
+            height:23vh;
+        }
+    }
+    @media screen and (max-width:699px) {   
+        html{
+            font-size: 12px;
+        }
+        .header{
+            padding: 0 5%;
+            width: 90%;
+            height: 6vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* box-shadow: .3rem .3rem 5rem #11151745; */
+        }
+        .where, .mode{
+            font-size: 1rem;
+        }
+        .nav-bar{
+            flex-direction: row-reverse;
+        }
+        .countries{
+            grid-template-columns: 1fr 1fr;
+            /* grid-template-rows: 1fr 1fr ; */
+        }
+        .country{
+            padding-bottom: 1vh;
+            height:23vh;
+        }
+        .desc{
+            height: 50%;
+        }
+        .desc>*{
+            padding: 1% 5%  0;
+        }     
+        .c-flag{
+            height: 50%;
+            padding: 0;
+        }
+        .c-name{
+            padding: 2% 5% 0;
+        }   
+    }
+    @media screen and (max-width:470px) {  
+        .nav-bar{
+            flex-direction: column;
+            gap: 1rem;
+            
+        }
+        .search-handle{
+            width: 70%;
+            border-radius: 0.3rem;
+        }
+        .filter{
+            width: 40%;
+        }
+        .countries{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .country{
+            width:65%;
+        }
+    } 
+
 }
