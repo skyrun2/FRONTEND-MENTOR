@@ -8,7 +8,6 @@ function mode() {
 
 }
 mode()
-console.log(file)
 
 function getQeuryParam(str) {
     const urlParams = new URLSearchParams(window.location.search);
@@ -16,7 +15,6 @@ function getQeuryParam(str) {
 }
 
 const seachQuery =  getQeuryParam('country')
-console.log(seachQuery)
 let countryInfo = document.getElementById('country-info')
 let countryobj = {}
 

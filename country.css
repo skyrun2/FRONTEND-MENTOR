@@ -83,7 +83,6 @@ a{
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px #DDE6ED solid;
-    /* box-shadow: .3rem .3rem 5rem #11151745; */
 }
 .where{
   font-weight: 800;

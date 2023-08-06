@@ -17,7 +17,10 @@
 .search-handle, .country, .filter, .contients{
     box-shadow: .3rem .3rem 0.3rem #11151715;
 }
-
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
 body.lm .header{
     background-color: var(--lmElements);
     color: var(--lmText);
@@ -189,9 +192,14 @@ main{
     height: fit-content;
     text-align: left;
     border-radius: .5rem;
-    top: 22.5vh;
+    top: 20vh;
     display: none;
     flex-direction: column;
+    background-color: black;
+    z-index: 2;
+}
+.contients:hover{
+    display: flex;
 }
 option{
     /* padding: 1rem 1rem; */
@@ -203,6 +211,9 @@ option{
 option:hover{
     /* transform: scale(90%); */
     background-color: grey;
+}
+option:hover > .contients{
+    display: flex;
 }
 
 .countries{
@@ -334,7 +345,6 @@ option:hover{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            /* box-shadow: .3rem .3rem 5rem #11151745; */
         }
         .where, .mode{
             font-size: 1rem;
@@ -344,7 +354,6 @@ option:hover{
         }
         .countries{
             grid-template-columns: 1fr 1fr;
-            /* grid-template-rows: 1fr 1fr ; */
         }
         .country{
             padding-bottom: 1vh;
