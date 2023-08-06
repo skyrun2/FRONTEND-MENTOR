@@ -3,36 +3,8 @@
     margin: 0;
     padding: 0;
     font-family: 'Nunito Sans', sans-serif;
-    /* box-sizing: border-box; */
-    /* font-size: 0.875rem; */
  }
- /* .dm-e{
-    background-color:hsl(209, 23%, 22%) ;
-    color:  hsl(0, 0%, 100%);
-}
- .dm-b{
-    color:  hsl(0, 0%, 100%);
-    background-color:  hsl(207, 26%, 17%);
- } */
- /* .lm-i{
-    background-color: hsl(0, 0%, 100%);
-    color: hsl(0, 0%, 52%);
-    box-shadow: .3rem .3rem 0.5rem #11151745;
- }
- .lm-b{
-    background-color: hsl(0, 0%, 98%) ;
-    color:  hsl(200, 15%, 8%);
- }
- .lm-e{
-    background-color: hsl(0, 0%, 100%);
-    color:  hsl(200, 15%, 8%);
-    box-shadow: .3rem .3rem 0.5rem #11151745;
- } */
-
-/* body{
-    width: 100%;
-    background-color: aquamarine;
-} */
+ 
 :root {
     --dmElements: hsl(209, 23%, 22%);
     --dmBackground: hsl(207, 26%, 17%);
@@ -51,10 +23,13 @@ body.lm .header{
     color: var(--lmText);
 }
 body.lm .mode::before{
-    content: "light mode";
+    content: "dark mode";
 }
 body.lm main{
     background-color: var(--lmBackground);
+    color: var(--lmText);
+}
+body.lm .mode-icon{
     color: var(--lmText);
 }
 body.lm .search-handle{
@@ -85,8 +60,11 @@ body.dm .header{
     background-color: var(--dmElements);
     color: var(--dmText);
 }
+body.dm .mode-icon{
+   fill: var(--dmText);
+}
 body.dm .mode::before{
-    content: "dark mode";
+    content: "light mode";
 }
 body.dm main{
     background-color: var(--dmBackground);
@@ -170,6 +148,9 @@ main{
     border-radius: 0.7rem 0 0 0.7rem ;
     background-color: inherit;
 }
+.search-icon:hover{
+    cursor: pointer;
+}
 .search{
     border-radius: 0 0.7rem .7rem 0 ;
     width: 100%;
@@ -237,6 +218,12 @@ option:hover{
     display:flex;
     flex-direction: column;
 }
+.q-p{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: aquamarine;  */
+} 
 .desc{
     height: 60%;
     width: 100%;

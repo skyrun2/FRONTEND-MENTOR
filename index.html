@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <link rel="icon" href="favicon/favicon 16x16.png" type="image/png">
+    <link rel="icon" href="favicon/favicon36x36.png" type="image/png">
+
+    <title>World Countries</title>
 </head>
 <body class="lm" id="body">
     <header class="header lm-e  ">
         <h2 class="where">Where in the world?</h2>
-        <div class="mode-handle"><img class="mode-icon" src="rest-countries-api-with-color-theme-switcher-master/design/moon-phase-symbol-svgrepo-com.svg"><span class="mode" id="mode"></span></div>
+        <div class="mode-handle"><img class="mode-icon lm" src="rest-countries-api-with-color-theme-switcher-master/design/moon-phase-symbol-svgrepo-com.svg"><span class="mode" id="mode"></span></div>
     </header>
     <section class="stage loading-screen">
         <figure class="ball"><span class="shadow"></span></figure>
@@ -18,9 +21,9 @@
     <main class="main lm-b dm-b">
         <nav class="nav-bar ">
             <label for="search " class="search-handle lm-i dm-e ">
-                <img class="search-icon " src="rest-countries-api-with-color-theme-switcher-master/design/magnifying-glass-backup-svgrepo-com.svg" alt="">
+                <img class="search-icon "  id='search-icon' src="rest-countries-api-with-color-theme-switcher-master/design/magnifying-glass-backup-svgrepo-com.svg" alt="">
                 <input 
-                name="search" type="text" placeholder="search for a country..
+                name="search" type="text" id="search-bar" placeholder="search for a country..
                 ."
                 class="search lm-i dm-e">
             </label>
@@ -44,5 +47,6 @@
     </main>
     <footer class="footer"></footer>
     <script type="module" src="index.js" ></script>
+    <script type="module" src="search.js" ></script>
 </body>
 </html>
