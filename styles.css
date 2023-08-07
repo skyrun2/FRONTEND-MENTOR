@@ -21,6 +21,9 @@ body{
     width: 100%;
     overflow-x: hidden;
 }
+body.lm{
+    background-color: var(--lmBackground) ;
+}
 body.lm .header{
     background-color: var(--lmElements);
     color: var(--lmText);
@@ -58,7 +61,9 @@ body.lm .contients{
     background-color: var(--lmElements);
     color: var(--lmText);
 }
-
+body.dm{
+    background-color: var(--dmBackground);
+}
 body.dm .header{
     background-color: var(--dmElements);
     color: var(--dmText);
@@ -106,6 +111,7 @@ body.dm .contients{
     align-items: center;
     justify-content: space-between;
     /* box-shadow: .3rem .3rem 5rem #11151745; */
+    overflow-x: hidden;
 }
 .where{
   font-weight: 800;
@@ -131,10 +137,12 @@ main{
     /* background-color: aqua; */
     display: flex;
     flex-direction: column; 
+    overflow-x: hidden;
 } 
 .nav-bar{
     padding: 5vh 0;
     display: flex;
+    overflow-x: hidden;
     /* align-items: center; */
     justify-content: space-between;
     align-items:start;
@@ -221,6 +229,7 @@ option:hover > .contients{
     display:grid;
     grid-template-columns:4fr  4fr 4fr 4fr;
     gap: 4rem;
+    overflow-x: hidden;
 }
 .country{
     width: 100%;
