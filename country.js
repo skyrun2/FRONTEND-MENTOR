@@ -46,7 +46,7 @@ document.title = countryobj.name
         <p class="lang   txt">Languages <span id="lang">${obj.languages[0].name}</span></p>
     </div>
     <div class="border">
-    <p class="bord-count txt  ">Border Countries</p>
+    <p class="bord-count txt  ">Border Countries:</p>
     <div class="borded " id="borded">
     </div>
     </div>
@@ -55,9 +55,22 @@ document.title = countryobj.name
     let borders = document.getElementById('borded')
     let borderList = ''
     console.log(obj.borders);
-    borderList = obj.borders.map((e,i,arr) =>{`<div class="count txt">${arr[i]}</div>`})
+    for (let i = 0; i<obj.borders.length; i++){
+        borderList += `<div class="count txt">${obj.borders[i]}
+        <a href="country.html?country=${borderCountriesName(obj.borders[i])}" class="q-p"></a>
+        </div>`
+    }
     console.log(borderList);
     borders.innerHTML = borderList
  }
  placement(countryobj)
+
+ function borderCountriesName(str) {
+    for (const country of file) {
+        if ( country.alpha3Code === str){
+            return country.name
+        }
+    }
+ }
+ console.log(borderCountriesName('IRN'));
  
